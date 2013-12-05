@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Project 3 for DWA</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+
+	<!--
+	<link href="css/hot-sneaks/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+    -->
+   
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id='wrapper'>
+
+		<div id='costcalc'>
+
+		    <h1>Road Trip Cost Calculator</h1>
+
+            
+            <form>
+            <h3>Numbers only, please!</h3>
+
+       
+            <label for='miles'>&nbsp;Miles</label>
+		    <input type='text' required name='miles' id='miles' size='10' onkeypress="return numbersonly(event)" >
+		    <br>
+
+
+		    <label for='milespergallon'>&nbsp;Miles per Gallon</label>
+		    <input type='text' name='milespergallon' id='milespergallon' size='10' onkeypress="return numbersonly(event)"><br>
+
+		    <label for='costofgaspergallon'>&nbsp;Gas Price</label>
+		    <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' onkeypress="return numbersonly(event)"><br>
+
+		    <label for='food'>&nbsp;Food</label>
+		    <input type='text' name='food' id='food' size='10' onkeypress="return numbersonly(event)"><br>
+
+		    <label for='lodging'>&nbsp;Lodging</label>
+		    <input type='text' name='lodging' id='lodging' size='10' onkeypress="return numbersonly(event)"><br>
+
+		    <label for='attractions'>&nbsp;Attractions</label>
+		    <input type='text' name='attractions' id='attractions' size='10' onkeypress="return numbersonly(event)"><br>
+
+		    <label for='misc'>&nbsp;Misc</label>
+		    <input type='text' name='misc' id='misc' size='10' onkeypress="return numbersonly(event)"><br><br>
+
+		    <input type='button' id='total-cost-btn' value='Calculate Total'>
+		    <input type='reset' name='Reset' value='reset'><br> <br>
+
+		    <label for='showtotalcost'>&nbsp;Total Cost: $</label> 
+		    <span id='showtotalcost'></span>
+
+		    </form>
+
+	    </div> <!--costcalc -->
+
+	    <div id='costcalc'>
+
+	   
+	    	<h2>Useful Conversion Tools</h2> 
+
+         
+		    <div id='tools'>
+		    	
+		        <input type='text' name='km' id='km' size='6' onkeypress="return numbersonly(event)" >
+		        <label for='km'>&nbsp;KM  to </label>
+
+		    </div>
+
+		    <div id='tools'>
+		    	
+		        <span id='milesconvert'></span>
+		        <label for='milesconvert'>&nbsp;Miles</label>
+		   
+		    </div>
+            <br>
+
+		   
+		    <div id='tools'>
+		    	
+		        <input type='text' name='miles2' id='miles2' size='6' onkeypress="return numbersonly(event)" >
+		        <label for='miles2'>&nbsp;Miles  to </label>
+		        
+		    </div>
+
+		    <div id='tools'>
+		    	
+		        <span id='kmconvert'></span>
+		        <label for='kmconvert'>&nbsp;KM</label>
+		   
+		    </div>
+
+		</div> <!-- end of costcalc div -->
+
+	
+
+
+	</div> <!--End of wrapper -->		
+
+
+
+
+<script src="js/roadtrip.js"></script>
+
+
+</body>
+
+
+</html>
