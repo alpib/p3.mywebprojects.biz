@@ -17,58 +17,72 @@
 
 		</div> <!--end of header div  -->
 
-		<div id='costcalc'>        
+		<div id='costcalculator'>        
             <form>       
             <h3>Numbers only, please!</h3>
             <h5>Fields marked with a * are required</h5>
 
-            <!--Labels of inputs on th eleft column -->
-            <div id='calclabels'>
-
+            <!--Form with inputs -->
+            <div id='forminputs'>
+                <div class='labels'>
             	<span style="color:darkred;font-weight:bold">*</span>
                 <label for='miles'>&nbsp;Miles</label>
-                <br>
+                </div>
 
+                <div class'inputs'>
+            	<input type='text' required name='miles' id='miles' size='10' >
+            	</div>
+
+                <div class='labels'>
                 <span style="color:darkred;font-weight:bold">*</span>
 		        <label for='milespergallon'>&nbsp;Miles per Gallon</label>
-		        <br>
+		        </div> 
 
+		        <div class'inputs'>
+		        <input type='text' name='milespergallon' id='milespergallon' size='10'>
+		        </div>
+
+		        <div class='labels'>
 		        <span style="color:darkred;font-weight:bold">*</span>
 		        <label for='costofgaspergallon'>&nbsp;Gas Price</label>
-		        <br>
+		        </div>
 
+		        <div class'inputs'>
+		        <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' ></div>
+
+		        <div class='labels'>
 		        <label for='food'>&nbsp;Food</label>
-		        <br>
+		        </div>
 
+		        <div class'inputs'>
+		        <input type='text' name='food' id='food' size='10' >
+		        </div>
+
+		        <div class='labels'>
 		        <label for='lodging'>&nbsp;Lodging</label>
-		         <br>
+		        </div>
 
+		        <div class'inputs'>
+		        <input type='text' name='lodging' id='lodging' size='10' >
+		        </div>
+
+		        <div class='labels'>
 		        <label for='attractions'>&nbsp;Attractions</label>
-		        <br>
+		        </div>
 
+		        <div class'inputs'>
+		        <input type='text' name='attractions' id='attractions' size='10' >
+		        </div>
+
+		        <div class='labels'>
 		        <label for='misc'>&nbsp;Misc</label>
-		        <br>
+		        </div>
 
-            </div>	
-
-
-            <!--Input fields on the right column -->
-            <div id='calcinputs'>
-
-            	<input type='text' required name='miles' id='miles' size='10' ><br>
-
-		        <input type='text' name='milespergallon' id='milespergallon' size='10'><br>
-
-		        <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' ><br>
-
-		        <input type='text' name='food' id='food' size='10' ><br>
-		   
-		        <input type='text' name='lodging' id='lodging' size='10' ><br>
-   
-		        <input type='text' name='attractions' id='attractions' size='10' ><br>
-		
+		        <div class'inputs'>
 		        <input type='text' name='misc' id='misc' size='10' >
-            </div>
+		        </div>
+
+            </div>	<!--forminputs-->
 
 		  
             <br>
@@ -83,7 +97,7 @@
 
 		    </form>
 
-	    </div> <!--costcalc -->
+	    </div> <!--costcalculator -->
 
 	    <div id='usefultools'>
 	    	<h2>Useful Conversion Tools</h2> 

@@ -57,7 +57,7 @@ Layout
 }
 
 /* div for cost calculator*/
-#costcalc {
+#costcalculator {
     position: relative;
 	width: 600px;
 	height: 310px;
@@ -72,28 +72,33 @@ div for calculator inputs
 to line them up like table elements 
 -------------------------------------------------------------------------------*/
 
-/* Labels on the left  */
-#calclabels {
+/* box for Labels and inputs on the left  */
+#forminputs {
   	float: left;
-	width:245px;
-	height: 220px;
+	width:380px;
+	height: 280px;
 	z-index:3;
-	border: 1px;
-	font-size: 24px;
+	font-size: 18px;
 	color: slategray;
 	text-align: right;
+} 
+
+/* samll divs to align inputs with labels */
+.labels {
+    float:left;
+    width:240px;
+    height:25px;
+    text-align: right;
 }
 
-/* inputs on the right   */
-#calcinputs {
-    float: left;
+.inputs {
+    float:left;
     width:120px;
-	height: 220px;
-	z-index:3;
-	border:1px;
-	text-align: left;
-	padding-left: 5px;
+    height:25px;
+    text-align: left;
+
 }
+
 
 /* div for useful tools*/
 #usefultools {
@@ -104,7 +109,7 @@ to line them up like table elements
 	box-shadow: inset 0 0 1em lightgray;
 	padding: 5px;
 	font-size: 16px;
-	text-align: center;
+	text-align: left;
 }
 
 #footer {
