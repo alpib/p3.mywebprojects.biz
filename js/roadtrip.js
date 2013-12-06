@@ -6,7 +6,7 @@ http://www.javascriptkit.com/javatutors/javascriptkey3.shtml
 //Function that only allows numbers to be typed
 function numbersonly(e){
 var unicode=e.charCode? e.charCode : e.keyCode
-if (unicode!=8){ //if the key isn't the backspace key (which we should allow)
+if ((unicode!=8) & (unicode !=46)) { //if the key isn't the backspace key (which we should allow)
 if (unicode<48||unicode>57) //if not a number
 return false //disable key press
 }
@@ -58,9 +58,10 @@ function calculatetotalcost() {
 
 	var totalcost = 0;
 
-	var costofgas = (miles/milespergallon) * costofgaspergallon;
+	var costofgas = Math.round((miles/milespergallon) * costofgaspergallon);
 
-	totalcost = parseInt(costofgas) + parseInt(food) + parseInt(lodging) + parseInt(attractions) + parseInt(misc); 
+	totalcost = parseFloat(costofgas) + parseFloat(food) + parseFloat(lodging) + parseFloat(attractions) + parseFloat(misc); 
+	totalcost = totalcost.toFixed(2);
 
 	$('#showtotalcost').html(totalcost);
 
@@ -73,7 +74,8 @@ $('#km').keyup(function() {
 	var km = $(this).val();
 
 	//convert to miles
-	var kmtomiles = parseInt(km/1.6);
+	var kmtomiles = parseFloat(km/1.6);
+	kmtomiles = kmtomiles.toFixed(2);
 
 	//display the miles in the milesconvert field
 	$('#milesconvert').html(kmtomiles);
@@ -86,8 +88,10 @@ $('#miles2').keyup(function() {
 	//find what the user typed in
 	var miles2 = $(this).val();
 
+
 	//convert to miles
-	var milestokm = parseInt(miles2 * 1.6);
+	var milestokm = parseFloat(miles2 * 1.6);
+	milestokm = milestokm.toFixed(2);
 
 	//display the km in the kmconvert field
 	$('#kmconvert').html(milestokm);
@@ -101,7 +105,8 @@ $('#kmperliter').keyup(function() {
 	var kmperliter = $(this).val();
 
 	//convert to miles
-	var milespergallon = parseInt((kmperliter * 3.78)/1.6);
+	var milespergallon = parseFloat((kmperliter * 3.78)/1.6);
+	milespergallon = milespergallon.toFixed(2);
 
 	//display the km in the kmconvert field
 	$('#milespergallonconvert').html(milespergallon);
@@ -115,7 +120,8 @@ $('#milespergal').keyup(function() {
 	var milespergal = $(this).val();
 
 	//convert to miles
-	var kmperliter = parseInt((milespergal * 1.6)/3.78);
+	var kmperliter = parseFloat((milespergal * 1.6)/3.78);
+	kmperliter = kmperliter.toFixed(2);
 
 	//display the km in the kmconvert field
 	$('#kmperliterconvert').html(kmperliter);

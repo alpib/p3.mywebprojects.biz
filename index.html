@@ -26,31 +26,65 @@
             
             <form>
             <h3>Numbers only, please!</h3>
+            <h5>Fields marked with a * are required</h5>
 
-            <span style="color:red;font-weight:bold">*</span>
-            <label for='miles'>&nbsp;Miles</label>
-		    <input type='text' required name='miles' id='miles' size='10' onkeypress="return numbersonly(event)" >
-		    <br>
+            <!--Labels of inputs on th eleft column -->
+            <div id='calclabels'>
 
-		    <span style="color:red;font-weight:bold">*</span>
-		    <label for='milespergallon'>&nbsp;Miles per Gallon</label>
-		    <input type='text' name='milespergallon' id='milespergallon' size='10' onkeypress="return numbersonly(event)"><br>
+            	<span style="color:darkred;font-weight:bold">*</span>
+                <label for='miles'>&nbsp;Miles</label>
+                <br>
 
-		    <span style="color:red;font-weight:bold">*</span>
-		    <label for='costofgaspergallon'>&nbsp;Gas Price</label>
-		    <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' onkeypress="return numbersonly(event)"><br>
+                <span style="color:darkred;font-weight:bold">*</span>
+		        <label for='milespergallon'>&nbsp;Miles per Gallon</label>
+		        <br>
 
-		    <label for='food'>&nbsp;Food</label>
-		    <input type='text' name='food' id='food' size='10' onkeypress="return numbersonly(event)"><br>
+		        <span style="color:darkred;font-weight:bold">*</span>
+		        <label for='costofgaspergallon'>&nbsp;Gas Price</label>
+		        <br>
 
-		    <label for='lodging'>&nbsp;Lodging</label>
-		    <input type='text' name='lodging' id='lodging' size='10' onkeypress="return numbersonly(event)"><br>
+		        <label for='food'>&nbsp;Food</label>
+		        <br>
 
-		    <label for='attractions'>&nbsp;Attractions</label>
-		    <input type='text' name='attractions' id='attractions' size='10' onkeypress="return numbersonly(event)"><br>
+		        <label for='lodging'>&nbsp;Lodging</label>
+		         <br>
 
-		    <label for='misc'>&nbsp;Misc</label>
-		    <input type='text' name='misc' id='misc' size='10' onkeypress="return numbersonly(event)"><br><br>
+		        <label for='attractions'>&nbsp;Attractions</label>
+		        <br>
+
+		        <label for='misc'>&nbsp;Misc</label>
+		        <br>
+
+            </div>	
+
+
+            <!--Input fields on th eright column -->
+
+            <div id='calcinputs'>
+
+            	<input type='text' required name='miles' id='miles' size='10' onkeypress="return numbersonly(event)" >
+		        <br>
+
+
+		        <input type='text' name='milespergallon' id='milespergallon' size='10' onkeypress="return numbersonly(event)"><br>
+
+
+		        <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' onkeypress="return numbersonly(event)"><br>
+
+		    
+		        <input type='text' name='food' id='food' size='10' onkeypress="return numbersonly(event)"><br>
+
+		   
+		        <input type='text' name='lodging' id='lodging' size='10' onkeypress="return numbersonly(event)"><br>
+
+		   
+		        <input type='text' name='attractions' id='attractions' size='10' onkeypress="return numbersonly(event)"><br>
+
+		
+		        <input type='text' name='misc' id='misc' size='10' onkeypress="return numbersonly(event)">
+            </div>
+
+		  
 
 		    <input type='button' id='total-cost-btn' value='Calculate Total'>
 		    <input type='reset' name='Reset' value='reset'>
