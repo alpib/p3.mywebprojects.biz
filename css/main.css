@@ -35,7 +35,7 @@ input[type=text] {
 Layout
 ---------------------------------------------------------------------------------------------*/
 #wrapper {
-	width:500px;
+	width:600px;
 	margin:0 auto;
 }
 
@@ -44,7 +44,7 @@ Layout
 
     position: relative;
     background-color: #9FB6CD;
-	width: 500px;
+	width: 600px;
 	height: 60px;
 	border: 4px solid slategray;
 	box-shadow: inset 0 0 1em lightgray;
@@ -55,8 +55,8 @@ Layout
 /* div for cost calculator*/
 #costcalc {
     position: relative;
-	width: 500px;
-	height: 360px;
+	width: 600px;
+	height: 310px;
 	padding: 5px;
 	border: 4px solid slategray;
 	box-shadow: inset 0 0 1em lightgray;
@@ -83,10 +83,10 @@ to line them up like table elements
 /* inputs on the right   */
 #calcinputs {
     float: left;
-    width:245px;
+    width:120px;
 	height: 220px;
 	z-index:3;
-	border:1px ;
+	border:1px;
 	text-align: left;
 	padding-left: 5px;
 }
@@ -94,7 +94,7 @@ to line them up like table elements
 /* div for useful tools*/
 #usefultools {
     position: relative;
-	width: 500px;
+	width: 600px;
 	height: 275px;
 	border: 4px solid slategray;
 	box-shadow: inset 0 0 1em lightgray;
@@ -105,8 +105,9 @@ to line them up like table elements
 
 #footer {
     position: relative;
-	width: 500px;
+	width: 600px;
 	height: 40px;
+	background-color: #9FB6CD;
 	border: 4px solid slategray;
 	box-shadow: inset 0 0 1em lightgray;
 	padding: 5px;
@@ -114,9 +115,9 @@ to line them up like table elements
 	text-align: center;
 }
 
-#tools {
+.tools {
     float:left;
-    width:220px;
+    width:275px;
     height:35px;
     margin: 5px;
     padding: 5px;

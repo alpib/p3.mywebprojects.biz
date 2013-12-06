@@ -12,14 +12,22 @@ return false //disable key press
 }
 }
 
+//Listeners for input fields and buttons
+$('input').keypress(numbersonly);
 
 $('#total-cost-btn').click(function() {
 
    calculatetotalcost();
 
+});
+
+$('#reset').click(function() {
+
+	window.location.reload();
 
 });
 
+//calculation function
 function calculatetotalcost() { 
 
 

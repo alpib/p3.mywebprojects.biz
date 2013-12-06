@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
-
+<html lang="us">
 <head>
-
+    <meta charset="utf-8">
 	<title>Road Trip Cost Calculator</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
-   
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,14 +18,10 @@
 
 		</div> <!--end of header div  -->
 
-		<div id='costcalc'>
-
-            
-            <form>
-          
+		<div id='costcalc'>        
+            <form>       
             <h3>Numbers only, please!</h3>
             <h5>Fields marked with a * are required</h5>
-
 
             <!--Labels of inputs on th eleft column -->
             <div id='calclabels'>
@@ -60,39 +53,34 @@
             </div>	
 
 
-            <!--Input fields on th eright column -->
-
+            <!--Input fields on the right column -->
             <div id='calcinputs'>
 
-            	<input type='text' required name='miles' id='miles' size='10' onkeypress="return numbersonly(event)" >
-		        <br>
+            	<input type='text' required name='miles' id='miles' size='10' ><br>
 
+		        <input type='text' name='milespergallon' id='milespergallon' size='10'><br>
 
-		        <input type='text' name='milespergallon' id='milespergallon' size='10' onkeypress="return numbersonly(event)"><br>
+		        <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' ><br>
 
-
-		        <input type='text' name='costofgaspergallon' id='costofgaspergallon' size='10' onkeypress="return numbersonly(event)"><br>
-
-		    
-		        <input type='text' name='food' id='food' size='10' onkeypress="return numbersonly(event)"><br>
-
+		        <input type='text' name='food' id='food' size='10' ><br>
 		   
-		        <input type='text' name='lodging' id='lodging' size='10' onkeypress="return numbersonly(event)"><br>
-
-		   
-		        <input type='text' name='attractions' id='attractions' size='10' onkeypress="return numbersonly(event)"><br>
-
+		        <input type='text' name='lodging' id='lodging' size='10' ><br>
+   
+		        <input type='text' name='attractions' id='attractions' size='10' ><br>
 		
-		        <input type='text' name='misc' id='misc' size='10' onkeypress="return numbersonly(event)">
+		        <input type='text' name='misc' id='misc' size='10' >
             </div>
 
 		  
-
+            <br>
 		    <input type='button' id='total-cost-btn' value='Calculate Total'>
-		    <input type='reset' name='Reset' value='reset' onClick="window.location.reload()">
+		    <br>
 
-		    <label for='showtotalcost'>&nbsp;Total Cost: $</label> 
+		    <label>&nbsp;Total Cost: $</label>
 		    <span id='showtotalcost'></span>
+		    <br><br><br><br>
+
+		    <input type='reset' id='reset' value='Reset' >
 
 		    </form>
 
@@ -102,67 +90,67 @@
 
 	    	<h2>Useful Conversion Tools</h2> 
         
-		    <div id='tools'>	
+		    <div class='tools'>	
 
-		        <input class='searchfield' type='text' name='km' id='km' size='6' onkeypress="return numbersonly(event)" >
-		        <label for='km'>&nbsp;KM  to </label>
+		        <input class='searchfield' type='text' name='km' id='km' size='6' >
+		        <label for='km'>&nbsp;Km  to </label>
 
 		    </div>
 
-		    <div id='tools'>
+		    <div class='tools'>
 
 		        <span id='milesconvert'></span>
-		        <label for='milesconvert'>&nbsp;Miles</label>
+		        <label>&nbsp;Miles</label>
 
 		    </div>
             <br>
 
 		   
-		    <div id='tools'>
+		    <div class='tools'>
 
-		    	<input class='searchfield' type='text' name='miles2' id='miles2' size='6' onkeypress="return numbersonly(event)" >
-		        <label for='miles2'>&nbsp;Miles  to </label>	
+		    	<input class='searchfield' type='text' name='miles2' id='miles2' size='6' >
+		        <label>&nbsp;Miles  to </label>	
 
 		    </div>
 
-		    <div id='tools'>
+		    <div class='tools'>
 
 		        <span id='kmconvert'></span>
-		        <label for='kmconvert'>&nbsp;KM</label>	 
+		        <label>&nbsp;Km</label>	 
 
 		    </div>
 
 
 		    <!-- tool for converting km per liter to miles per gallon -->
 
-		    <div id='tools'>	
+		    <div class='tools'>	
 
-		        <input class='searchfield' type='text' name='kmperliter' id='kmperliter' size='6' onkeypress="return numbersonly(event)" >
-		        <label for='kmperliter'>&nbsp;KM/liter to</label>	
+		        <input class='searchfield' type='text' name='kmperliter' id='kmperliter' size='6' >
+		        <label>&nbsp;Km/liter to</label>	
 
 		    </div>
 
-		    <div id='tools'>	
+		    <div class='tools'>	
 
 		        <span id='milespergallonconvert'></span>
-		        <label for='milespergallonconvert'>&nbsp;Miles/gallon</label>	
+		        <label>&nbsp;Miles/gallon</label>	
 
 		    </div>
 
 
 		    <!-- tool for converting miles per gallon to kn per liter -->
 
-		    <div id='tools'>	 
+		    <div class='tools'>	 
 
-		        <input class='searchfield' type='text' name='milespergal' id='milespergal' size='6' onkeypress="return numbersonly(event)" >
-		        <label for='milespergal'>&nbsp;Miles/gal to</label>	   
+		        <input class='searchfield' type='text' name='milespergal' id='milespergal' size='6' >
+		        <label>&nbsp;Miles/gal to</label>	   
 
 		    </div>
 
-		    <div id='tools'>
+		    <div class='tools'>
 		    	
 		        <span id='kmperliterconvert'></span>
-		        <label for='kmperliterconvert'>&nbsp;KM/liter</label>
+		        <label>&nbsp;Km/liter</label>
 		   
 		    </div>
 
