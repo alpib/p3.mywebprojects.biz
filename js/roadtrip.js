@@ -78,8 +78,8 @@ $('#km').keyup(function() {
 	//display the miles in the milesconvert field
 	$('#milesconvert').html(kmtomiles);
 
-
 });
+
 
 $('#miles2').keyup(function() {
 
@@ -92,6 +92,33 @@ $('#miles2').keyup(function() {
 	//display the km in the kmconvert field
 	$('#kmconvert').html(milestokm);
 
+});
+
+//comvert km per liters to miles per gallon
+$('#kmperliter').keyup(function() {
+
+	//find what the user typed in
+	var kmperliter = $(this).val();
+
+	//convert to miles
+	var milespergallon = parseInt((kmperliter * 3.78)/1.6);
+
+	//display the km in the kmconvert field
+	$('#milespergallonconvert').html(milespergallon);
+
+});
+
+//comvert miles per gallon to km per liter
+$('#milespergal').keyup(function() {
+
+	//find what the user typed in
+	var milespergal = $(this).val();
+
+	//convert to miles
+	var kmperliter = parseInt((milespergal * 1.6)/3.78);
+
+	//display the km in the kmconvert field
+	$('#kmperliterconvert').html(kmperliter);
 
 });
 
